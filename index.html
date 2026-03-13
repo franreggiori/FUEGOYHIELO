@@ -9,15 +9,18 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --dark:    #172834;
-      --darker:  #111E26;
-      --darkest: #0C1318;
-      --mid:     #142030;
-      --gold:    #C8DDE8;
-      --gold-lt: #DDEEF5;
-      --bone:    #EDF2F5;
-      --muted:   rgba(237,242,245,0.45);
-      --faint:   rgba(237,242,245,0.12);
+      --dark:    #202020;
+      --darker:  #181818;
+      --darkest: #111111;
+      --mid:     #F2EDE6;
+      --gold:    #C4622D;
+      --gold-lt: #D4784A;
+      --bone:    #F8F4EF;
+      --muted:   rgba(248,244,239,0.5);
+      --faint:   rgba(248,244,239,0.12);
+      --lt-text:   #1A1A1A;
+      --lt-muted:  rgba(26,26,26,0.52);
+      --lt-faint:  rgba(26,26,26,0.1);
     }
 
     html { scroll-behavior: smooth; }
@@ -68,8 +71,8 @@
       padding: 22px 0; transition: background 0.4s ease, padding 0.3s ease;
     }
     #navbar.scrolled {
-      background: rgba(8,8,18,0.96); backdrop-filter: blur(16px);
-      padding: 14px 0; border-bottom: 1px solid rgba(201,168,76,0.12);
+      background: rgba(17,17,17,0.97); backdrop-filter: blur(16px);
+      padding: 14px 0; border-bottom: 1px solid rgba(196,98,45,0.15);
     }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; }
     .nav-logo { text-decoration: none; display: flex; flex-direction: column; line-height: 1; }
@@ -139,27 +142,22 @@
       gap: 32px;
       overflow: hidden;
     }
-    .sep-line { flex: 1; max-width: 260px; height: 1px; background: rgba(201,168,76,0.25); }
+    .sep-line { flex: 1; max-width: 260px; height: 1px; background: rgba(26,26,26,0.15); }
     .sep-center { display: flex; flex-direction: column; align-items: center; gap: 12px; }
     .sep-logo {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.1rem; font-weight: 600;
       letter-spacing: 0.3em; text-transform: uppercase;
-      color: var(--bone); white-space: nowrap;
+      color: var(--lt-text); white-space: nowrap;
     }
     .sep-tagline {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1rem; font-style: italic; font-weight: 300;
       color: var(--gold); letter-spacing: 0.08em; white-space: nowrap;
     }
-    .sep-dots {
-      display: flex; gap: 10px; margin-top: 4px;
-    }
-    .sep-dots span {
-      width: 4px; height: 4px; border-radius: 50%;
-      background: var(--gold); opacity: 0.5;
-    }
-    .sep-dots span:nth-child(2) { opacity: 1; background: var(--gold); }
+    .sep-dots { display: flex; gap: 10px; margin-top: 4px; }
+    .sep-dots span { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); opacity: 0.4; }
+    .sep-dots span:nth-child(2) { opacity: 1; }
 
     /* ─── BENEFICIOS ─── */
     #beneficios { background: var(--darkest); padding-bottom: 0; }
@@ -209,14 +207,14 @@
       gap: 2px;
     }
     .benefit-card {
-      background: var(--dark); padding: 44px 36px;
-      border: 1px solid rgba(255,255,255,0.04);
-      transition: border-color 0.3s, transform 0.25s;
+      background: #fff; padding: 44px 36px;
+      border: 1px solid rgba(26,26,26,0.07);
+      transition: border-color 0.3s, transform 0.25s, box-shadow 0.25s;
     }
-    .benefit-card:hover { border-color: rgba(201,168,76,0.2); transform: translateY(-4px); }
+    .benefit-card:hover { border-color: rgba(196,98,45,0.3); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
     .benefit-icon { font-size: 1.8rem; margin-bottom: 18px; line-height: 1; }
-    .benefit-title { font-family: 'Cormorant Garamond', serif; font-size: 1.18rem; font-weight: 600; color: var(--bone); margin-bottom: 10px; letter-spacing: 0.02em; }
-    .benefit-desc { font-size: 0.85rem; line-height: 1.75; color: var(--muted); font-weight: 300; }
+    .benefit-title { font-family: 'Cormorant Garamond', serif; font-size: 1.18rem; font-weight: 600; color: var(--lt-text); margin-bottom: 10px; letter-spacing: 0.02em; }
+    .benefit-desc { font-size: 0.85rem; line-height: 1.75; color: var(--lt-muted); font-weight: 300; }
 
     /* relleno split */
     .beneficios-split {
@@ -276,20 +274,27 @@
 
     /* ─── MEMBRESÍAS ─── */
     #membresias { background: var(--mid); padding: 140px 0; }
+    #membresias .section-title { color: var(--lt-text); }
+    #membresias .section-subtitle { color: var(--lt-muted); }
+    #membresias .eyebrow { color: var(--gold); }
     .membresias-header { text-align: center; margin-bottom: 72px; }
     .membresias-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
-    .mem-card { background: var(--dark); padding: 52px 40px; display: flex; flex-direction: column; position: relative; border: 1px solid rgba(255,255,255,0.04); transition: transform 0.25s ease, box-shadow 0.25s ease; }
-    .mem-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
-    .mem-card.featured { background: #1E1A08; border-color: var(--gold); }
-    .mem-badge { position: absolute; top: -1px; right: 28px; background: var(--gold); color: var(--darkest); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; padding: 6px 14px; }
+    .mem-card { background: #fff; padding: 52px 40px; display: flex; flex-direction: column; position: relative; border: 1px solid rgba(26,26,26,0.08); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .mem-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+    .mem-card.featured { background: var(--darkest); border-color: var(--gold); }
+    .mem-badge { position: absolute; top: -1px; right: 28px; background: var(--gold); color: #fff; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; padding: 6px 14px; }
     .mem-plan { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
-    .mem-price { font-family: 'Cormorant Garamond', serif; font-size: 3.6rem; font-weight: 300; line-height: 1; color: var(--bone); margin-bottom: 4px; }
+    .mem-price { font-family: 'Cormorant Garamond', serif; font-size: 3.6rem; font-weight: 300; line-height: 1; color: var(--lt-text); margin-bottom: 4px; }
+    .mem-card.featured .mem-price { color: var(--bone); }
     .mem-price sup { font-size: 1.3rem; font-family: 'Inter'; font-weight: 300; vertical-align: super; }
-    .mem-per { font-size: 0.78rem; color: var(--muted); margin-bottom: 36px; }
+    .mem-per { font-size: 0.78rem; color: var(--lt-muted); margin-bottom: 36px; }
+    .mem-card.featured .mem-per { color: var(--muted); }
     .mem-features { list-style: none; display: flex; flex-direction: column; gap: 14px; flex: 1; margin-bottom: 40px; }
-    .mem-features li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.86rem; line-height: 1.5; color: var(--muted); }
+    .mem-features li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.86rem; line-height: 1.5; color: var(--lt-muted); }
+    .mem-card.featured .mem-features li { color: var(--muted); }
     .mem-features li::before { content: '—'; color: var(--gold); flex-shrink: 0; margin-top: 1px; }
-    .mem-tagline { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-style: italic; color: rgba(245,240,232,0.25); margin-bottom: 28px; }
+    .mem-tagline { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-style: italic; color: var(--lt-muted); opacity: 0.6; margin-bottom: 28px; }
+    .mem-card.featured .mem-tagline { color: var(--muted); opacity: 1; }
 
     /* ─── RESERVA ─── */
     #reserva { background: var(--darker); padding: 140px 0; }
@@ -334,7 +339,7 @@
     .porque-desc { font-size: 0.86rem; line-height: 1.85; color: var(--muted); font-weight: 300; }
 
     /* ─── FOOTER ─── */
-    footer { background: var(--darkest); border-top: 1px solid rgba(201,168,76,0.1); padding: 72px 0 40px; }
+    footer { background: var(--darkest); border-top: 1px solid rgba(196,98,45,0.15); padding: 72px 0 40px; }
     .footer-top { text-align: center; margin-bottom: 52px; }
     .footer-logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.22em; color: var(--bone); }
     .footer-logo-tag { font-family: 'Cormorant Garamond', serif; font-size: 0.82rem; font-style: italic; color: var(--gold); letter-spacing: 0.06em; margin-top: 7px; }
