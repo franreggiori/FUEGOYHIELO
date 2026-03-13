@@ -9,15 +9,15 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --dark:    #1A1A2E;
-      --darker:  #0D0D1A;
-      --darkest: #080812;
-      --mid:     #12122A;
+      --dark:    #1C1A16;
+      --darker:  #131210;
+      --darkest: #0C0B09;
+      --mid:     #221F1A;
       --gold:    #C9A84C;
-      --gold-lt: #E2C06A;
-      --bone:    #F5F0E8;
-      --muted:   rgba(245,240,232,0.45);
-      --faint:   rgba(245,240,232,0.12);
+      --gold-lt: #DDB96A;
+      --bone:    #F0EBE1;
+      --muted:   rgba(240,235,225,0.45);
+      --faint:   rgba(240,235,225,0.12);
     }
 
     html { scroll-behavior: smooth; }
@@ -100,7 +100,7 @@
     /* ─── HERO ─── */
     #hero { position: relative; height: 100svh; min-height: 620px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
     .hero-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1583416750470-965b2707b355?w=1600'); background-size: cover; background-position: center; background-attachment: fixed; }
-    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(160deg, rgba(8,8,18,0.55) 0%, rgba(8,8,18,0.75) 60%, rgba(8,8,18,0.92) 100%); }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(160deg, rgba(10,9,7,0.3) 0%, rgba(10,9,7,0.55) 55%, rgba(10,9,7,0.82) 100%); }
     .hero-content { position: relative; z-index: 2; padding: 0 24px; }
     .hero-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); margin-bottom: 30px; }
     .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.8rem, 11vw, 9rem); font-weight: 300; letter-spacing: 0.2em; color: var(--bone); line-height: 1; margin-bottom: 20px; }
@@ -128,6 +128,38 @@
     .metodo-panel-divider { width: 32px; height: 1px; background: var(--gold); opacity: 0.6; margin-bottom: 16px; }
     .metodo-panel-desc { font-size: 0.85rem; font-weight: 300; line-height: 1.75; color: rgba(245,240,232,0.62); max-width: 260px; }
     .metodo-temp { position: absolute; top: 36px; right: 36px; font-family: 'Cormorant Garamond', serif; font-size: 3.8rem; font-weight: 300; color: rgba(201,168,76,0.18); line-height: 1; letter-spacing: -0.02em; }
+
+    /* ─── SEPARADOR ─── */
+    .separador {
+      background: var(--mid);
+      padding: 80px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      overflow: hidden;
+    }
+    .sep-line { flex: 1; max-width: 260px; height: 1px; background: rgba(201,168,76,0.25); }
+    .sep-center { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .sep-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-weight: 600;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--bone); white-space: nowrap;
+    }
+    .sep-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem; font-style: italic; font-weight: 300;
+      color: var(--gold); letter-spacing: 0.08em; white-space: nowrap;
+    }
+    .sep-dots {
+      display: flex; gap: 10px; margin-top: 4px;
+    }
+    .sep-dots span {
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--gold); opacity: 0.5;
+    }
+    .sep-dots span:nth-child(2) { opacity: 1; background: var(--gold); }
 
     /* ─── BENEFICIOS ─── */
     #beneficios { background: var(--darkest); padding-bottom: 0; }
@@ -438,6 +470,17 @@
       </div>
     </div>
   </section>
+
+  <!-- ─── SEPARADOR ─── -->
+  <div class="separador">
+    <div class="sep-line"></div>
+    <div class="sep-center">
+      <span class="sep-logo">CONTRAST CLUB</span>
+      <span class="sep-tagline">Sentí el contraste. Viví el cambio.</span>
+      <div class="sep-dots"><span></span><span></span><span></span></div>
+    </div>
+    <div class="sep-line"></div>
+  </div>
 
   <!-- ─── BENEFICIOS ─── -->
   <section id="beneficios">
