@@ -9,18 +9,18 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --dark:    #192845;
-      --darker:  #111D35;
-      --darkest: #0B1120;
-      --mid:     #F4F7FB;
-      --gold:    #6B9EBE;
-      --gold-lt: #88B4D0;
-      --bone:    #EEF4FA;
-      --muted:   rgba(238,244,250,0.5);
-      --faint:   rgba(238,244,250,0.12);
-      --lt-text:   #0F1A2E;
-      --lt-muted:  rgba(15,26,46,0.52);
-      --lt-faint:  rgba(15,26,46,0.08);
+      --dark:    #1A1A2E;
+      --darker:  #0D0D1A;
+      --darkest: #080810;
+      --mid:     #F5F0E8;
+      --gold:    #C9A84C;
+      --gold-lt: #E2C06A;
+      --bone:    #F5F0E8;
+      --muted:   rgba(245,240,232,0.5);
+      --faint:   rgba(245,240,232,0.12);
+      --lt-text:   #1A1A2E;
+      --lt-muted:  rgba(26,26,46,0.55);
+      --lt-faint:  rgba(26,26,46,0.08);
     }
 
     html { scroll-behavior: smooth; }
@@ -71,8 +71,8 @@
       padding: 22px 0; transition: background 0.4s ease, padding 0.3s ease;
     }
     #navbar.scrolled {
-      background: rgba(11,17,32,0.97); backdrop-filter: blur(16px);
-      padding: 14px 0; border-bottom: 1px solid rgba(107,158,190,0.2);
+      background: rgba(8,8,16,0.97); backdrop-filter: blur(16px);
+      padding: 14px 0; border-bottom: 1px solid rgba(201,168,76,0.15);
     }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; }
     .nav-logo { text-decoration: none; display: flex; flex-direction: column; line-height: 1; }
@@ -211,7 +211,7 @@
       border: 1px solid rgba(26,26,26,0.07);
       transition: border-color 0.3s, transform 0.25s, box-shadow 0.25s;
     }
-    .benefit-card:hover { border-color: rgba(107,158,190,0.35); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(11,17,32,0.1); }
+    .benefit-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,26,46,0.1); }
     .benefit-icon { font-size: 1.8rem; margin-bottom: 18px; line-height: 1; }
     .benefit-title { font-family: 'Cormorant Garamond', serif; font-size: 1.18rem; font-weight: 600; color: var(--lt-text); margin-bottom: 10px; letter-spacing: 0.02em; }
     .benefit-desc { font-size: 0.85rem; line-height: 1.75; color: var(--lt-muted); font-weight: 300; }
@@ -277,12 +277,13 @@
     #membresias .section-title { color: var(--lt-text); }
     #membresias .section-subtitle { color: var(--lt-muted); }
     #membresias .eyebrow { color: var(--gold); }
+    .mem-card.featured { background: var(--dark); border-color: var(--gold); }
     .membresias-header { text-align: center; margin-bottom: 72px; }
     .membresias-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
     .mem-card { background: #fff; padding: 52px 40px; display: flex; flex-direction: column; position: relative; border: 1px solid rgba(26,26,26,0.08); transition: transform 0.25s ease, box-shadow 0.25s ease; }
     .mem-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
     .mem-card.featured { background: var(--darkest); border-color: var(--gold); }
-    .mem-badge { position: absolute; top: -1px; right: 28px; background: var(--gold); color: var(--darkest); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; padding: 6px 14px; }
+    .mem-badge { position: absolute; top: -1px; right: 28px; background: var(--gold); color: var(--darker); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; padding: 6px 14px; }
     .mem-plan { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
     .mem-price { font-family: 'Cormorant Garamond', serif; font-size: 3.6rem; font-weight: 300; line-height: 1; color: var(--lt-text); margin-bottom: 4px; }
     .mem-card.featured .mem-price { color: var(--bone); }
@@ -339,7 +340,7 @@
     .porque-desc { font-size: 0.86rem; line-height: 1.85; color: var(--muted); font-weight: 300; }
 
     /* ─── FOOTER ─── */
-    footer { background: var(--darkest); border-top: 1px solid rgba(107,158,190,0.15); padding: 72px 0 40px; }
+    footer { background: var(--darkest); border-top: 1px solid rgba(201,168,76,0.12); padding: 72px 0 40px; }
     .footer-top { text-align: center; margin-bottom: 52px; }
     .footer-logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.22em; color: var(--bone); }
     .footer-logo-tag { font-family: 'Cormorant Garamond', serif; font-size: 0.82rem; font-style: italic; color: var(--gold); letter-spacing: 0.06em; margin-top: 7px; }
